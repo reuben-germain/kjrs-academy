@@ -1,161 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KJRS Academy</title>
-    <!-- Tailwind CSS CDN script: -->
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-    <!-- Navigation Bar Logo & Title -->
-    <nav class="p-5 bg-blue-700 text-white shadow md:flex md:items-center md:justify-between">
-        <div>
-            <span class="text-2xl font-[Poppins] cursor-pointer">
-                <img class="h-10 inline" src="G-Tech Academy Logo.png" alt="Logo">
-                G-Tech Academy
-            </span>
+  <head>
+    <!--Import Google Font for Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!--Import Tailwind CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" />
+    <!--Link CSS-->
+    <link rel="stylesheet" href="main.css" />
+    <!--Import Font Awesome Icons-->
+    <script src="https://kit.fontawesome.com/4f05169479.js" crossorigin="anonymous"></script>
+    <!--Meta Tags-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Reuben" />
+    <meta name="description" content="This is an example of a responsive webpage that I created using the Tailwind CSS Framework" />
+    <title>Germain Tech Academy</title>
+  </head>
+
+  <body class="font-sans">
+    <!--Navbar-->
+    <div class="fixed w-full bg-indigo-900 shadow-lg z-10">
+      <nav class="container mx-auto px-4 py-2 flex justify-between items-center">
+        <a href="#" class="text-white text-xl font-bold">Germain Tech Academy</a>
+        <div class="hidden md:flex space-x-4">
+          <a href="#home" class="text-white hover:text-orange-400">Home</a>
+          <a href="#about" class="text-white hover:text-orange-400">About</a>
+          <a href="#resources" class="text-white hover:text-orange-400">Resources</a>
+          <a href="#contact" class="text-white hover:text-orange-400">Contact</a>
+          <a href="#login" class="text-white hover:text-orange-400">Login</a>
+          <a href="#consultation" class="text-orange-400 border border-orange-400 px-4 py-2 rounded hover:bg-orange-400 hover:text-white">Book Consultation</a>
         </div>
-    <!-- Navigation Bar Links -->
-        <ul class="md:flex md:items-center">
-            <li class="mx-4">
-                <a href="#" class="text-xl hover:text-yellow-500 duration-500">HOME</a>
-            </li>
-            <li class="mx-4">
-                <a href="#" class="text-xl hover:text-yellow-500 duration-500">ABOUT</a>
-            </li>
-            <li class="mx-4">
-                <a href="#" class="text-xl hover:text-yellow-500 duration-500">RESOURCES</a>
-            </li>
-            <li class="mx-4">
-                <a href="#" class="text-xl hover:text-yellow-500 duration-500">CONTACT</a>
-            </li>
-
-            <button class="bg-blue-800 text-yellow-500 font-[Poppins] duration-500 px-6 py-2 mx-4 hover:bg-cyan-500">
-                LOGIN
-            </button>
-        </ul>
-    </nav>
-
-    <!-- Hero Section -->
-    <div
-  id="carouselExampleIndicators"
-  class="relative"
-  data-twe-carousel-init
-  data-twe-ride="carousel">
-  <!--Carousel indicators-->
-  <div
-    class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
-    data-twe-carousel-indicators>
-    <button
-      type="button"
-      data-twe-target="#carouselExampleIndicators"
-      data-twe-slide-to="0"
-      data-twe-carousel-active
-      class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-      aria-current="true"
-      aria-label="Slide 1"></button>
-    <button
-      type="button"
-      data-twe-target="#carouselExampleIndicators"
-      data-twe-slide-to="1"
-      class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-      aria-label="Slide 2"></button>
-    <button
-      type="button"
-      data-twe-target="#carouselExampleIndicators"
-      data-twe-slide-to="2"
-      class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-      aria-label="Slide 3"></button>
-  </div>
-
-  <!--Carousel items-->
-  <div
-    class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
-    <!--First item-->
-    <div
-      class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-      data-twe-carousel-item
-      data-twe-carousel-active>
-      <img
-        src="imgs/gta1.jpeg"
-        class="block w-full"
-        alt="Wild Landscape" />
+        <button class="md:hidden text-white" onclick="toggleMobileNav()">
+          <i class="material-icons">menu</i>
+        </button>
+      </nav>
     </div>
-    <!--Second item-->
-    <div
-      class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-      data-twe-carousel-item>
-      <img
-        src="imgs/gta2.jpeg"
-        class="block w-full"
-        alt="Camera" />
+
+    <div class="hidden fixed w-full bg-indigo-900 md:hidden" id="mobile-nav">
+      <a href="#home" class="block px-4 py-2 text-white hover:bg-indigo-700">Home</a>
+      <a href="#about" class="block px-4 py-2 text-white hover:bg-indigo-700">About</a>
+      <a href="#resources" class="block px-4 py-2 text-white hover:bg-indigo-700">Resources</a>
+      <a href="#contact" class="block px-4 py-2 text-white hover:bg-indigo-700">Contact</a>
+      <a href="#shop" class="block px-4 py-2 text-white hover:bg-indigo-700">Shop</a>
+      <a href="#login" class="block px-4 py-2 text-white hover:bg-indigo-700">Login</a>
+      <a href="#button" class="block px-4 py-2 text-white hover:bg-indigo-700">Button</a>
     </div>
-    <!--Third item-->
-    <div
-      class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-      data-twe-carousel-item>
-      <img
-        src="imgs/gta3.jpeg"
-        class="block w-full"
-        alt="Exotic Fruits" />
+
+    <!--Section 1-->
+    <div class="relative overflow-hidden mt-16">
+      <div class="carousel">
+        <div class="carousel-inner relative w-full overflow-hidden">
+          <div class="carousel-item active relative float-left w-full">
+            <img src="imgs/gta1.jpeg" alt="Slider 1" class="block w-full object-cover h-96" />
+            <div class="carousel-caption absolute inset-0 flex flex-col justify-center items-center text-center text-white bg-opacity-50 bg-black">
+              <h2 class="text-4xl font-bold text-indigo-300">Learn To Code And Become A Developer In A Growing Industry</h2>
+              <p class="hidden md:block text-lg text-gray-300">Blockchain Technology is an emerging industry and skilled developers are in high demand. The skills you'll learn include blockchain architecture, cryptography, smart contracts development, data structures, web-development and knowledge of programming languages such as JavaScript/HTML, C++, SQL, Solidity, and many more.</p>
+            </div>
+          </div>
+
+          <!--Section 1 - Programming Languages-->
+    <section id="cards" class="py-16 bg-white">
+        <div class="container mx-auto">
+          <h3 class="text-center text-3xl font-bold mb-8">
+            <span class="text-indigo-700">Programming</span> Languages
+          </h3>
+          <div class="flex flex-wrap -mx-4">
+            <div class="w-full md:w-1/3 px-4 mb-8">
+              <div class="shadow-lg hover:shadow-2xl transition-shadow">
+                <img src="imgs/gta4.jpeg" alt="Python" class="w-full h-48 object-cover" />
+                <div class="p-4">
+                  <h4 class="text-xl font-bold">Python</h4>
+                  <p class="mt-2">Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation. Python is dynamically-typed and garbage-collected. It supports multiple programming paradigms, including structured, object-oriented and functional programming.</p>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-1/3 px-4 mb-8">
+              <div class="shadow-lg hover:shadow-2xl transition-shadow">
+                <img src="imgs/gta5.jpeg" alt="Solidity" class="w-full h-48 object-cover" />
+                <div class="p-4">
+                  <h4 class="text-xl font-bold">Solidity</h4>
+                  <p class="mt-2">Solidity is an object-oriented programming language for implementing smart contracts on various blockchain platforms, most notably, Ethereum. It was developed by Christian Reitwiessner, Alex Beregszaszi, and several former Ethereum core contributors. Programs in Solidity run on Ethereum Virtual Machine.</p>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-1/3 px-4 mb-8">
+              <div class="shadow-lg hover:shadow-2xl transition-shadow">
+                <img src="imgs/gta6.jpeg" alt="JavaScript" class="w-full h-48 object-cover" />
+                <div class="p-4">
+                  <h4 class="text-xl font-bold">JavaScript</h4>
+                  <p class="mt-2">JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for web page behavior, often incorporating third-party libraries.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Section 2-->
+          <div class="carousel-item relative float-left w-full">
+            <img src="imgs/gta2.jpeg" alt="Slider 2" class="block w-full object-cover h-96" />
+            <div class="carousel-caption absolute inset-0 flex flex-col justify-center items-center text-center text-white bg-opacity-50 bg-black">
+              <h2 class="text-4xl font-bold text-gray-200">Understanding Bitcoin, Ethereum, Defi, Monero &amp; Privacy Coins</h2>
+              <p class="hidden md:block text-lg text-indigo-200">This course will ensure that you completely understand the fundamentals of Bitcoin, Ethereum, Defi, and Monero - and be able to make decisions and career paths based on them.</p>
+            </div>
+          </div>
+
+          <!--Section 2 - Study Options-->
+        <section id="study-options" class="py-16 bg-gray-100">
+            <div class="container mx-auto">
+              <h3 class="text-center text-3xl font-bold mb-8">
+                <span class="text-indigo-700">Choose your preferred</span> study option
+              </h3>
+              <div class="flex flex-wrap -mx-4">
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                  <div class="shadow-lg hover:shadow-2xl transition-shadow bg-white p-6 text-center">
+                    <i class="fas fa-home fa-3x text-indigo-700"></i>
+                    <h4 class="text-xl font-bold mt-4">Learn at Home</h4>
+                    <p class="mt-2">Enjoy the comfort of studying at your own pace and at your own place, with access to our extensive range of resources and support.</p>
+                  </div>
+                </div>
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                  <div class="shadow-lg hover:shadow-2xl transition-shadow bg-white p-6 text-center">
+                    <i class="fas fa-laptop fa-3x text-indigo-700"></i>
+                    <h4 class="text-xl font-bold mt-4">Online Learning</h4>
+                    <p class="mt-2">Flexible online learning options available 24/7, enabling you to study whenever and wherever it suits you best.</p>
+                  </div>
+                </div>
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                  <div class="shadow-lg hover:shadow-2xl transition-shadow bg-white p-6 text-center">
+                    <i class="fas fa-users fa-3x text-indigo-700"></i>
+                    <h4 class="text-xl font-bold mt-4">In-Class Learning</h4>
+                    <p class="mt-2">Engage in interactive in-class learning experiences with our expert instructors and fellow students.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!--Section 3 - Trading & Economics-->
+          <div class="carousel-item relative float-left w-full">
+            <img src="imgs/gta3.jpeg" alt="Slider 3" class="block w-full object-cover h-96" />
+            <div class="carousel-caption absolute inset-0 flex flex-col justify-center items-center text-center text-white bg-opacity-50 bg-black">
+              <h2 class="text-4xl font-bold text-indigo-300">Trading &amp; Economic Analysis</h2>
+              <p class="hidden md:block text-lg text-gray-300">According to George Stigler, a Nobel Laureate in economics, economic literacy is special because it contributes to two classes of knowledge. Economic literacy gives people the tool for understanding their economic world and how to interpret events that will either directly or indirectly affect them. Economic literacy improves the competence of each individual for making personal and social decisions about the multitude of economic issues that will be encountered over a lifetime.</p>
+            </div>
+          </div>
+        </div>
+
+        <!--Section 3 - Consultation-->
+        <section id="consultation" class="py-16 bg-white">
+            <div class="container mx-auto">
+              <h3 class="text-center text-3xl font-bold text-orange-500 mb-8">Interested In A Consultation?</h3>
+              <div class="flex flex-wrap -mx-4">
+                <div class="w-full md:w-1/2 px-4 mb-8">
+                  <div class="hover:shadow-lg">
+                    <div class="bg-white rounded-lg overflow-hidden">
+                      <img src="imgs/sophie-coding.jpeg" alt="Sophie" class="w-full h-auto" />
+                      <div class="p-6">
+                        <h4 class="text-xl font-bold">Consultation w/ Sophie</h4>
+                        <ul class="list-disc list-inside mt-4">
+                          <li>Fundamental analysis of stocks and cryptocurrencies</li>
+                          <li>How to analyze & create a structured balance portfolio</li>
+                          <li>Technical analysis of stocks and cryptocurrencies</li>
+                        </ul>
+                        <a href="#" class="block bg-orange-500 text-white text-center py-2 mt-4 rounded-lg hover:bg-orange-600">Book Consultation</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full md:w-1/2 px-4 mb-8">
+                  <div class="hover:shadow-lg">
+                    <div class="bg-white rounded-lg overflow-hidden">
+                      <img src="imgs/eli-on-macbook.jpeg" alt="Eli" class="w-full h-auto" />
+                      <div class="p-6">
+                        <h4 class="text-xl font-bold">Consultation w/ Eli</h4>
+                        <hr class="my-4">
+                        <ul class="list-disc list-inside mt-4">
+                          <li>Earn Passive Income/Decentralized Finance</li>
+                          <li>How to create, buy and sell Nonfungible Tokens (NFTs)</li>
+                          <li>How to analyze a cryptocurrency project and its utility</li>
+                        </ul>
+                        <a href="#" class="block bg-orange-500 text-white text-center py-2 mt-4 rounded-lg hover:bg-orange-600">Book Consultation</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+
+        
+
+
+
+
+        <button class="carousel-control-prev absolute top-1/2 left-4 transform -translate-y-1/2" onclick="prevSlide()">
+          <span class="carousel-control-prev-icon bg-black bg-opacity-50 p-2 rounded-full"></span>
+        </button>
+        <button class="carousel-control-next absolute top-1/2 right-4 transform -translate-y-1/2" onclick="nextSlide()">
+          <span class="carousel-control-next-icon bg-black bg-opacity-50 p-2 rounded-full"></span>
+        </button>
+      </div>
     </div>
-  </div>
 
-  <!--Carousel controls - prev item-->
-  <button
-    class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-    type="button"
-    data-twe-target="#carouselExampleIndicators"
-    data-twe-slide="prev">
-    <span class="inline-block h-8 w-8">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="h-6 w-6">
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M15.75 19.5L8.25 12l7.5-7.5" />
-      </svg>
-    </span>
-    <span
-      class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
-      >Previous</span
-    >
-  </button>
-  <!--Carousel controls - next item-->
-  <button
-    class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-    type="button"
-    data-twe-target="#carouselExampleIndicators"
-    data-twe-slide="next">
-    <span class="inline-block h-8 w-8">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="h-6 w-6">
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-      </svg>
-    </span>
-    <span
-      class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
-      >Next</span
-    >
-  </button>
-</div>
+    
 
+    <!--Section: Study Options-->
+    
 
-<!-- JS Link-->
-<script src="index.js"></script>
-</body>
+    <!--Section: Contact-->
+    <section id="contact" class="py-16 bg-indigo-900 text-white">
+      <div class="container mx-auto text-center">
+        <h3 class="text-3xl font-bold mb-8">Get in Touch</h3>
+        <form class="max-w-lg mx-auto">
+          <div class="mb-4">
+            <label for="name" class="block text-lg">Name</label>
+            <input type="text" id="name" class="w-full px-4 py-2 rounded border border-gray-300" />
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-lg">Email</label>
+            <input type="email" id="email" class="w-full px-4 py-2 rounded border border-gray-300" />
+          </div>
+          <div class="mb-4">
+            <label for="message" class="block text-lg">Message</label>
+            <textarea id="message" class="w-full px-4 py-2 rounded border border-gray-300"></textarea>
+          </div>
+          <button type="submit" class="bg-orange-400 text-white px-4 py-2 rounded hover:bg-orange-500">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!--Footer-->
+    <footer class="py-6 bg-indigo-900 text-center text-white">
+      <div class="container mx-auto">
+        <p>&copy; 2024 Germain Tech Academy. All Rights Reserved.</p>
+        <div class="mt-4">
+          <a href="#" class="text-white mx-2 hover:text-orange-400"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="text-white mx-2 hover:text-orange-400"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-white mx-2 hover:text-orange-400"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <!--JavaScript for Mobile Navigation Toggle-->
+    <script>
+      function toggleMobileNav() {
+        document.getElementById('mobile-nav').classList.toggle('hidden');
+      }
+    </script>
+  </body>
 </html>
